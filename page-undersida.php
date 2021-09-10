@@ -52,9 +52,3 @@ get_header();
 
 <!-- footer -->
 <?php get_footer(); ?>
-	</div>
-
-	<script src="js/script.js"></script>
-
-</body>
-</html>
