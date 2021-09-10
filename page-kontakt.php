@@ -28,7 +28,7 @@ get_header();
 								<input type="text" />
 								<label>E-post</label>
 								<input type="email" />
-								<label>Meddelande</label><br>
+								<label>Meddelande</label>
 								<textarea></textarea>
 								<input type="submit" value="Skicka" />
 							</form>
