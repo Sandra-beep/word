@@ -17,13 +17,12 @@ get_header();
 
 ?>
 
-
-<main>
+		<main>
 			<section>
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-9">
-							<h1>Blogg</h1>
+							<h1><?php the_title(); ?></h1>
 							<article>
 							<img src="<?php echo get_home_url();?>/wp-content/uploads/2021/09/washington.jpg" />
 								<h2 class="title">
@@ -92,7 +91,6 @@ get_header();
 									<li>
 										<form id="searchform" class="searchform">
 											<div>
-												<!-- <h2>Sök efter:</h2> -->
 												<label class="screen-reader-text">Sök efter:</label>
 												<input type="text" />
 												<input type="submit" value="Sök" />

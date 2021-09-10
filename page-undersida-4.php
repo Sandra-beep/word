@@ -7,7 +7,7 @@
 	<title>Labb 1</title>
 	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" />
 	<script src="js/jquery.js"></script>
 </head>
 
@@ -35,4 +35,4 @@ get_header();
 			</section>
 		</main>
 
-		<?php get_footer(); ?>
+<?php get_footer(); ?>
