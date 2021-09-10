@@ -25,7 +25,7 @@ get_header();
 							<h1><?php the_title(); ?></h1>
 							<?php 
 								// the query
-								$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+								$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>3)); ?>
 								
 								<?php if ( $wpb_all_query->have_posts() ) : ?>
 								
@@ -33,31 +33,33 @@ get_header();
 								
 									<!-- the loop -->
 									<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
-									<article>
-									
-										<img src="<?php echo get_the_post_thumbnail_url(); ?>" />
+										<article>
+
+										<!-- hämtar feature image från wp -->
+											<img src="<?php echo get_the_post_thumbnail_url(); ?>" /> 
+											<!-- loop för att hämta respektive del av inlägg från wordpres§s -->
 											<h2 class="title">
 												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 											</h2>
 											<ul class="meta">
 												<li>
-													<i class="fa fa-calendar"></i> 1 januari, 2016
+													<i class="fa fa-calendar"></i> <?php echo get_the_date() ?>
 												</li>
 												<li>
-													<i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
+													<i class="fa fa-user"></i> <a href="forfattare.html"><?php the_author() ?></a>
 												</li>
 												<li>
-													<i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
+													<i class="fa fa-tag"></i> <a href="kategori.html"><?php the_category(", ")?></a>
 												</li>
 											</ul>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex. Phasellus tristique nunc in leo faucibus, a consequat nulla sagittis. In sed mi mi. Praesent condimentum sollicitudin nibh. Vivamus vulputate purus quis volutpat fringilla. Ut tortor libero, semper eget dolor vel, hendrerit tempus dui. Suspendisse dictum efficitur blandit. In porta scelerisque nulla ac placerat.</p>
-									</article>
+											<p> <?php the_content(); ?> </p>
+										</article>
 									<?php endwhile; ?>
 									<!-- end of the loop -->
 								
 								</ul>
 								
-									<?php wp_reset_postdata(); ?>
+								<?php wp_reset_postdata(); ?>
 								
 								<?php else : ?>
 									<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
