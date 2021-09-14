@@ -12,14 +12,17 @@
 						<a class="logo" href="index.html">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
-						<form id="searchform" class="searchform">
+						<!-- <form id="searchform" class="searchform">
 							<div>
 								<label class="screen-reader-text">Sök efter:</label>
 								<input type="text" />
 								<input type="submit" value="Sök" />
 							</div>
-						</form>
+						</form> -->
+
+						<?php get_search_form() ?>
 					</div>
+
 					<div class="col-xs-4 text-right visible-xs">
 						<div class="mobile-menu-wrap">
 							<i class="fa fa-search"></i>
