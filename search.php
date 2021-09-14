@@ -22,16 +22,8 @@ get_header();
 				<div class="container">
 					<div class="row">
 						<div id="primary" class="col-xs-12 col-md-8 col-md-offset-2">
-							<h1>Sökresultat för: <?php ?></h1>
+							<h1>Sökresultat för: <?php print site_url() ?></h1>
 							<div class="searchform-wrap">
-								<!-- <form id="searchform" class="searchform">
-										<div>
-											<label class="screen-reader-text">Sök efter:</label>
-											<input type="text" />
-											<input type="submit" value="Sök" />
-										</div>
-									</form> -->
-
 								<form id ="searchform" class = "searchform" action =”/” method=”GET”>
 									<div>
 										<label class ="screen-reader-text" for =”search”> Sök efter: <?php echo home_url(’/’); ?> </label>
