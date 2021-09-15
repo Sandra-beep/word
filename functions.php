@@ -26,6 +26,7 @@ function register_menus() {
     register_nav_menus( array(
         'general' => 'General'
     ) );
+    register_nav_menu('side_nav_menu', 'Side Nav Menu');
 }
 
 add_action('after_setup_theme', 'register_menus');

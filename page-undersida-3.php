@@ -1,21 +1,6 @@
-<?php ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title>Labb 1</title>
-	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="css/custom.css" rel="stylesheet" type="text/css" />
-	<script src="js/jquery.js"></script>
-</head>
-
-<?php
-
-get_header();
-
-?>
+		<!-- header -->
+        <?php get_header(); ?>
 
 		<main>
 			<section>
