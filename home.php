@@ -1,5 +1,5 @@
 
-<!-- Hämtar bloginlägg -->
+<!-- Hämtar blogginlägg -->
 
 
 		<!-- header -->
@@ -50,8 +50,8 @@
               <h2>Pages</h2>
               <?php  wp_nav_menu([
 							'theme_location' => 'side_nav_menu',
-              'menu_class' => 'side-menu',
-              'menu_id' => 'blog-side-menu',
+                            'menu_class' => 'side-menu',
+                            'menu_id' => 'blog-side-menu',
 						]) ?>
                 <h2>Arkiv</h2>
               <?php get_archives();?>
