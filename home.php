@@ -54,7 +54,8 @@
                             'menu_id' => 'blog-side-menu',
 						]) ?>
                 <h2>Arkiv</h2>
-              <?php get_archives();?>
+              <li><ul><?php get_archives();?></ul><li>
+              
               <li class="categories">
                 <h2>Kategorier</h2>
                 <ul>
