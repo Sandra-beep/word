@@ -1,7 +1,7 @@
 
 <?php
 
-function enque_styles_custom() {
+function enque_styles_custom() { //köa alla styles och javascript filer
     //för att den vanliga style-sheeten ska fungera
     // wp_register_style('style', $uri . '/css/custom.css', false, '1.1', 'all');
 
@@ -17,19 +17,18 @@ function enque_styles_custom() {
 }
 
 
-add_action('wp_enqueue_scripts', 'enque_styles_custom');
-
-// wp_enqueue_style('style');
+add_action('wp_enqueue_scripts', 'enque_styles_custom'); //kalla på funktionerna
 
 
-function register_menus() {
-    register_nav_menus( array(
+
+function register_menus() { //registrera menyer i wp
+    register_nav_menus( array( //registrera vanliga menun top nav
         'general' => 'General'
     ) );
-    register_nav_menu('side_nav_menu', 'Side Nav Menu');
+    register_nav_menu('side_nav_menu', 'Side Nav Menu'); //registrera på sidomeny
 }
 
-add_action('after_setup_theme', 'register_menus');
+add_action('after_setup_theme', 'register_menus'); //kalla på menyerna
 
 
 add_theme_support( 'post-thumbnails' ); //så att feature image kommer upp i wordpress
